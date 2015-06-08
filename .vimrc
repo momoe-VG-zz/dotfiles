@@ -10,6 +10,22 @@ set termencoding=utf-8
 set fileencoding=utf-8
 set encoding=utf-8
 
+" .bash like
+" but up-down mapped j-k
+inoremap <C-a> <C-o>0
+inoremap <C-e> <C-o>$
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-d> <Delete>
+
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-l> <C-d>
+
 "twigのシンタックス
 autocmd BufNewFile,BufRead *.twig set filetype=htmljinja
 
