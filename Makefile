@@ -1,6 +1,6 @@
 BREW_PKGS = glib wget tree gnu-sed curl sl cmake
 
-RC_FILES = .bashrc .bash_profile
+RC_FILES = .bashrc .bash_profile .vimrc
 
 .PHONY: install intellij_idea $(BREW_PKGS) $(RC_FILES)
 
