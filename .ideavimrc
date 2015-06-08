@@ -15,6 +15,9 @@ inoremap <C-u> <C-o>d^
 
 " # <Tab> {{{
 nnoremap <Tab> gt
-nnoremap <S-Tab> gT
+nnore <S-Tab> gT
 " }}}
 
+nnoremap cw ciw
+nnoremap dw diw
+inoremap <C-w> <ESC>ciw

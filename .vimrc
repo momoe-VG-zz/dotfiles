@@ -26,6 +26,11 @@ cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 cnoremap <C-l> <C-d>
 
+" vimrc
+nnoremap cw ciw
+nnoremap dw diw
+inoremap <C-w> <ESC>ciw
+
 "twigのシンタックス
 autocmd BufNewFile,BufRead *.twig set filetype=htmljinja
 
