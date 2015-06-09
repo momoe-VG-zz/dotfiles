@@ -1,4 +1,4 @@
-BREW_PKGS = glib wget tree gnu-sed curl sl cmake
+BREW_PKGS = glib wget tree gnu-sed curl sl cmake jq
 
 RC_FILES = .bashrc .bash_profile .vimrc .ideavimrc
 
