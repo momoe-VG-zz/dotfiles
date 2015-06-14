@@ -1,6 +1,3 @@
-syntax on
-colorscheme molokai
-set t_Co=256
 set autoindent
 set tabstop=2
 set expandtab
@@ -81,6 +78,9 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 " Gitを便利に使う
 NeoBundle 'tpope/vim-fugitive'
 
+" colorscheme(s)
+NeoBundle 'tomasr/molokai'
+
 call neobundle#end()
 
 " Required:
@@ -90,3 +90,8 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 """"""""""""""""""""""""""""""
+
+" syntax, color
+syntax on
+colorscheme molokai
+set t_Co=256
