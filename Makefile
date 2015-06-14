@@ -6,7 +6,7 @@ ZSH_BIN = $(shell which zsh)
 
 .PHONY: install intellij_idea $(BREW_PKGS) $(RC_FILES)
 
-install: intellij_idea $(BREW_PKGS) nodejs cheatsheet $(PHP_PKGS)
+install: $(BREW_PKGS) $(CASK_PKGS) zsh vim intellij_idea php56 nodejs $(RC_FILES)
 
 $(BREW_PKGS):
 	brew install $@
@@ -24,7 +24,7 @@ intellij_idea:
 	brew cask install caskroom/homebrew-versions/java6
 	brew cask install intellij-idea
 
-$(PHP_PKGS):
+php56:
 	brew tap homebrew/php
 	brew tap homebrew/dupes
 	brew install $(PHP_PKGS)
