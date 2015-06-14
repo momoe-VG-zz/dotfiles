@@ -34,6 +34,10 @@ nodejs:
 	nodebrew ls | grep -q io@v2.0.2 || nodebrew install-binary io@v2.0.2
 	nodebrew use io@v2.0.2
 
+vim:
+	test -d ~/.vim/bundle/ || curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+	test -h ~/.vim/colors/ || ln -sv $(CURDIR)/.vim/colors ~/.vim/
+
 $(RC_FILES):
 	test -h ~/.$@ || ln -s $(CURDIR)/$@ ~/
 
