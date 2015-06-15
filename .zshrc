@@ -47,6 +47,10 @@ ZSH_THEME="fino"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git brew brew-cask colored-man colored-man python ruby)
 
+# Select complations list like emacs
+zstyle ':completion:*:default' menu select=1
+
+
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
