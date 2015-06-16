@@ -2,17 +2,18 @@ set autoindent
 set tabstop=2
 set expandtab
 set nocompatible
-set number
+set relativenumber number
 set termencoding=utf-8
 set fileencoding=utf-8
 set encoding=utf-8
+set hlsearch
 
 " .bash like
 " but up-down mapped j-k
 inoremap <C-a> <C-o>0
 inoremap <C-e> <C-o>$
-inoremap <C-k> <Up>
-inoremap <C-j> <Down>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Delete>
@@ -80,6 +81,9 @@ NeoBundle 'tpope/vim-fugitive'
 
 " colorscheme(s)
 NeoBundle 'tomasr/molokai'
+
+" 補完 
+NeoBundle 'Shougo/neocomplete.vim'
 
 call neobundle#end()
 
