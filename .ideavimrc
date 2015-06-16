@@ -1,5 +1,5 @@
-set number
-set relativenumber
+set relativenumber number
+set hlsearch
 
 " Bash like insert
 inoremap <C-a> <C-o>^
