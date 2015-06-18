@@ -15,6 +15,14 @@ $(CASK_PKGS):
 	brew cask install $@
 	brew cask alfred link
 
+update:
+	brew update
+	brew cask update
+
+cleanup:
+	brew cleanup
+	brew cask cleanup
+
 zsh:
 	brew install zsh
 	echo $$SHELL |grep -p zsh ||chsh -s $(ZSH_BIN)
