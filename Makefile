@@ -1,7 +1,7 @@
 BREW_PKGS = caskroom/cask/brew-cask glib wget tree gnu-sed curl sl cmake jq
 CASK_PKGS = google-chrome firefox lastpass iterm2 evernote skitch slack dash bettertouchtool cheatsheet vagrant virtualbox dropbox google-drive flux alfred
 PHP_PKGS = php56 php56-mcrypt php56-msgpack php56-opcache php56-xdebug php56-xhprof
-RC_FILES = .bashrc .bash_profile .vimrc .ideavimrc .zshrc .gitignore
+RC_FILES = .bashrc .bash_profile .vimrc .ideavimrc .zshrc .gitignore .gitconfig
 ZSH_BIN = $(shell which zsh)
 
 .PHONY: install intellij_idea $(BREW_PKGS) $(RC_FILES)
@@ -48,3 +48,7 @@ vim:
 
 $(RC_FILES):
 	test -h ~/.$@ || ln -s $(CURDIR)/$@ ~/
+
+git:
+	cp gitsecret.example ~/.gitsecret
+	@echo please edit ~/.gitsecret
