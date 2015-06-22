@@ -43,6 +43,7 @@ nodejs:
 	nodebrew use io@v2.0.2
 
 vim:
+	brew cask install macvim-kaoriya
 	test -d ~/.vim || ln -sv $(CURDIR)/.vim ~/
 	test -d ~/.vim/bundle/ || curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
