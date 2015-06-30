@@ -1,6 +1,7 @@
 BREW_PKGS = caskroom/cask/brew-cask glib wget tree gnu-sed curl sl cmake jq
 CASK_PKGS = google-chrome firefox lastpass iterm2 evernote skitch slack dash bettertouchtool cheatsheet vagrant virtualbox dropbox google-drive flux alfred
 PHP_PKGS = php56 php56-mcrypt php56-msgpack php56-opcache php56-xdebug php56-xhprof
+PYTHON_PKGS = python python3
 RC_FILES = .bashrc .bash_profile .vimrc .ideavimrc .zshrc .gitignore .gitconfig .gvimrc
 ZSH_BIN = $(shell which zsh)
 
@@ -36,6 +37,10 @@ php56:
 	brew tap homebrew/php
 	brew tap homebrew/dupes
 	brew install $(PHP_PKGS)
+
+python:
+	brew tap homebrew/python
+	brew install $(PYTHON_PKGS)
 
 nodejs:
 	brew install nodebrew
