@@ -44,8 +44,13 @@ ZSH_THEME="fino"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew brew-cask colored-man colored-man python ruby)
+# Add wijely, as too many plugins slow down shell startup.
+plugins=(\
+        git brew brew-cask \
+        colored-man \
+        ruby \
+        python virtualenvwrapper pip virtualenv\
+        )
 
 # Select complations list like emacs
 zstyle ':completion:*:default' menu select=1
