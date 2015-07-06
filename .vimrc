@@ -105,7 +105,7 @@ let mapleader = " "
 " Plugin: QuickRun, Quicklaunch & xUnit {{{
 let g:quickrun_config = get(g:, 'quickrun_config', {})
 "nnoremap <silent> <Leader>r :<C-u>QuickRun -runner vimproc:90 -split 'rightbelow 50vsp'<CR>
-nnoremap <silent> <Leader>r :<C-u>QuickRun -runner vimproc:updatetime=10 -split 'rightbelow 50vsp'<CR>
+nnoremap <silent> <Leader>r :<C-u>QuickRun -split 'rightbelow 50vsp'<CR>
 
 let b:quickrun_config = {
   \   'runner/vimproc' : 90,
