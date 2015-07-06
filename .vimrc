@@ -88,6 +88,9 @@ NeoBundle 'tomasr/molokai'
 " 補完 
 NeoBundle 'Shougo/neocomplete.vim'
 
+" quick-run
+NeoBundle 'thinca/vim-quickrun'
+
 call neobundle#end()
 
 " Required:
@@ -97,6 +100,29 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 """"""""""""""""""""""""""""""
+let mapleader = " "
+
+" Plugin: QuickRun, Quicklaunch & xUnit {{{
+let g:quickrun_config = get(g:, 'quickrun_config', {})
+"nnoremap <silent> <Leader>r :<C-u>QuickRun -runner vimproc:90 -split 'rightbelow 50vsp'<CR>
+nnoremap <silent> <Leader>r :<C-u>QuickRun -runner vimproc:updatetime=10 -split 'rightbelow 50vsp'<CR>
+
+let b:quickrun_config = {
+  \   'runner/vimproc' : 90,
+  \   'runner/vimproc/updatetime' : 90,
+  \ }
+let g:quickrun_config = {
+  \   '_' : {
+  \     'runner/vimproc' : 90,
+  \     'runner/vimproc/updatetime' : 90,
+  \     'outputter' : 'buffer',
+  \   },
+  \   'run/vimproc' : {
+  \     'exec' : '%s:p:r %a',
+  \     'runner' : 'vimproc',
+  \     'outputter' : 'buffer',
+  \   },
+  \ }
 
 " syntax, color
 syntax on
