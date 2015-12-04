@@ -51,6 +51,9 @@ nodejs:
 	nodebrew ls | grep -q io@v2.0.2 || nodebrew install-binary io@v2.0.2
 	nodebrew use io@v2.0.2
 
+go:
+	brew install go
+
 vim:
 	brew cask install macvim-kaoriya
 	test -d ~/.vim || ln -sv $(CURDIR)/.vim ~/

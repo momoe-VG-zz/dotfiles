@@ -57,7 +57,9 @@ zstyle ':completion:*:default' menu select=1
 
 
 # User configuration
+export GOPATH=$HOME/go
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:$GOPATH/bin
 test -f ~/.nodebrew/nodebrew && export PATH=$HOME/.nodebrew/current/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
