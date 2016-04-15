@@ -54,6 +54,11 @@ nodejs:
 go:
 	brew install go
 
+docker:
+	brew install docker
+	brew install docker-machine
+	brew install docker-compose
+
 vim:
 	brew cask install macvim-kaoriya
 	test -d ~/.vim || ln -sv $(CURDIR)/.vim ~/
