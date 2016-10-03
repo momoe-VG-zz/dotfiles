@@ -1,6 +1,6 @@
 BREW_PKGS = caskroom/cask/brew-cask glib wget tree gnu-sed curl sl cmake jq realpath
 BREW_TAPS = iveney/mocha
-CASK_PKGS = google-chrome firefox lastpass iterm2 evernote skitch slack dash bettertouchtool cheatsheet vagrant virtualbox dropbox google-drive flux alfred skype
+CASK_PKGS = google-chrome firefox lastpass iterm2 evernote skitch slack dash cheatsheet vagrant virtualbox dropbox google-drive flux alfred skype
 PHP_PKGS = php56 php56-mcrypt php56-msgpack php56-opcache php56-xdebug php56-xhprof
 PYTHON_PKGS = python python3
 RC_FILES = .bashrc .bash_profile .vimrc .ideavimrc .zshrc .gitignore .gitconfig .gvimrc
@@ -18,7 +18,6 @@ $(BREW_TAPS):
 
 $(CASK_PKGS):
 	brew cask install $@
-	brew cask alfred link
 
 update:
 	brew update
@@ -60,7 +59,7 @@ docker:
 	brew install docker-compose
 
 vim:
-	brew cask install macvim-kaoriya
+	brew cask install macvim
 	test -d ~/.vim || ln -sv $(CURDIR)/.vim ~/
 	test -d ~/.vim/bundle/ || curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
